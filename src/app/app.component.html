@@ -16,7 +16,7 @@
 <h4 *ngIf="connected" align="center">
   Connected. Waiting for real time location...
 </h4>
-<google-map height="600px" width="1450px" [options]="options" *ngIf="receivedLocation">
+<google-map height="600px" width="1450px" [options]="options" *ngIf="receivedLocation && scriptLoaded">
   <map-advanced-marker
     #markerElem="mapAdvancedMarker"
     [position]="{ lat: currentLatitude, lng: currentLongitude }"
